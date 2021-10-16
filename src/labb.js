@@ -68,7 +68,8 @@ function charCounter(a,b) {
 function numbersOnly(a) {
     let b = []
     for (let i = 0; i < a.length; i++) {
-        if(typeof a[i] === "number" && !isNaN(a[i]))
+        if(Number.isFinite(a[i]))
+        //if(typeof a[i] === "number" && !isNaN(a[i]))
             b.push(a[i])
     }
     return b
